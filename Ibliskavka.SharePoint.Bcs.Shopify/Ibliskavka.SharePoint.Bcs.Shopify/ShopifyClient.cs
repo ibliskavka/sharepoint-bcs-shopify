@@ -19,11 +19,9 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify
             _api = new ShopifyApi(apiKey, apiPassword, hostName);
         }
         
-        public void Dispose()
-        {
-            _api.Dispose();
-        }
-
+        /// <summary>
+        /// Get a list of all customers.
+        /// </summary>
         public dynamic GetCustomers()
         {
             var json = _api.Get("customers.json");
@@ -31,6 +29,9 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify
             return obj;
         }
 
+        /// <summary>
+        /// Gets a certain customer by Id.
+        /// </summary>
         public dynamic GetCustomer(int id)
         {
             var json = _api.Get(string.Format("customers/{0}.json", id));
@@ -38,6 +39,9 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify
             return obj;
         }
 
+        /// <summary>
+        /// Sets the note on a customer record. TODO: This can easily be expanded for other fields.
+        /// </summary>
         public void UpdateCustomerNote(int id, string note)
         {
             var customer = new Dictionary<string, object>();
@@ -49,6 +53,14 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify
 
             string json = _serializer.Serialize(request);
             var response = _api.Put(string.Format("customers/{0}.json", id), json);
+        }
+
+        /// <summary>
+        /// Release disposable resources
+        /// </summary>
+        public void Dispose()
+        {
+            _api.Dispose();
         }
     }
 }

@@ -11,11 +11,9 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify
     /// </summary>
     public class ShopifyApi : IDisposable
     {
-        private const string URL_FORMAT = "https://{0}:{1}@{2}/admin/{3}";
-        
-        private string _apiKey;
-        private string _apiPassword;
-        private string _hostName;
+        private readonly string _apiKey;
+        private readonly string _apiPassword;
+        private readonly string _hostName;
         
         private readonly WebClient _wc;
 
@@ -31,23 +29,33 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify
             _wc.Credentials = new NetworkCredential(_apiKey, _apiPassword);
         }
         
-        public string Get(string query)
+        /// <summary>
+        /// Downloads a Shopify resource using the Get verb
+        /// </summary>
+        public string Get(string resource)
         {
-            string url = BuildUrl(query);
+            string url = BuildResourceUrl(resource);
             return _wc.DownloadString(url);
         }
         
-        public string Put(string query, string json)
+        /// <summary>
+        /// Uploads json to a resource using the PUT verb. Used for updating.
+        /// </summary>
+        public string Put(string resource, string json)
         {
-            string url = BuildUrl(query);
+            string url = BuildResourceUrl(resource);
             return _wc.UploadString(url, "PUT", json);
         }
 
-        private string BuildUrl(string query)
+        private string BuildResourceUrl(string query)
         {
-            return string.Format(URL_FORMAT, _apiKey, _apiPassword, _hostName, query);
+            const string urlFormat = "https://{0}:{1}@{2}/admin/{3}";
+            return string.Format(urlFormat, _apiKey, _apiPassword, _hostName, query);
         }
 
+        /// <summary>
+        /// Release disposable resources
+        /// </summary>
         public void Dispose()
         {
             _wc.Dispose();

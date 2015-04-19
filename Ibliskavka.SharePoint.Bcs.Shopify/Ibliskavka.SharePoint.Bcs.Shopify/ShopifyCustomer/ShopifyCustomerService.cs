@@ -9,7 +9,7 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer
 {
     /// <summary>
     /// All the methods for retrieving, updating and deleting data are implemented in this class file.
-    /// The samples below show the finder and specific finder method for Entity1.
+    /// This class implements IContextProperty to be able to read parameters from the BDCM.
     /// </summary>
     public class ShopifyCustomerService : IContextProperty
     {
@@ -18,11 +18,10 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer
         public IExecutionContext ExecutionContext { get; set; }
 
         /// <summary>
-        /// This is a sample specific finder method for Entity1.
-        /// If you want to delete or rename the method think about changing the xml in the BDC model file as well.
+        /// This is a sample specific finder method for Customer.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>Entity1</returns>
+        /// <returns>Customer</returns>
         public Customer ReadItem(int id)
         {
             using (var client = GetShopifyClient())
@@ -32,8 +31,7 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer
             }
         }
         /// <summary>
-        /// This is a sample finder method for Entity1.
-        /// If you want to delete or rename the method think about changing the xml in the BDC model file as well.
+        /// This is a sample finder method for Customer.
         /// </summary>
         /// <returns>IEnumerable of Entities</returns>
         public IEnumerable<Customer> ReadList()
@@ -51,6 +49,10 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer
             return result;
         }
 
+        /// <summary>
+        /// This method updates a customer. Currently it only updates the customer note but can be expanded pretty easily.
+        /// Notice that the method takes flat parameters, not an object.
+        /// </summary>
         public void UpdateItem(int id, string note)
         {
             using (var client = GetShopifyClient())
@@ -59,6 +61,10 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer
             }
         }
 
+        /// <summary>
+        /// Reads configuration parameters from BDCM and instantiates the ShopifyClient.
+        /// </summary>
+        /// <returns></returns>
         private ShopifyClient GetShopifyClient()
         {
             INamedPropertyDictionary properties = LobSystemInstance.GetProperties();
@@ -83,11 +89,6 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer
                 throw new ArgumentException("ApiHostName property must be defined for LOB System Instance");
 
             return new ShopifyClient(apiKey, apiPassword, apiHostName);
-        }
-
-        public static void UpdateCustomer()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

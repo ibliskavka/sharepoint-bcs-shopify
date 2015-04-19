@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ibliskavka.SharePoint.Bcs.Shopify.TestConsole", "Ibliskavka.SharePoint.Bcs.Shopify.TestConsole\Ibliskavka.SharePoint.Bcs.Shopify.TestConsole.csproj", "{7B4BC0C5-37BD-4C3A-877C-93DFDC0D223D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ibliskavka.SharePoint.Bcs.Shopify", "Ibliskavka.SharePoint.Bcs.Shopify\Ibliskavka.SharePoint.Bcs.Shopify.csproj", "{F8B26395-DDB7-4FA8-902D-243D00659816}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B4BC0C5-37BD-4C3A-877C-93DFDC0D223D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4BC0C5-37BD-4C3A-877C-93DFDC0D223D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4BC0C5-37BD-4C3A-877C-93DFDC0D223D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4BC0C5-37BD-4C3A-877C-93DFDC0D223D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B26395-DDB7-4FA8-902D-243D00659816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B26395-DDB7-4FA8-902D-243D00659816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B26395-DDB7-4FA8-902D-243D00659816}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F8B26395-DDB7-4FA8-902D-243D00659816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B26395-DDB7-4FA8-902D-243D00659816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B26395-DDB7-4FA8-902D-243D00659816}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

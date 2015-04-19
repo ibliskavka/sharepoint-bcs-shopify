@@ -2,6 +2,7 @@
 A SharePoint Business Connectivity Service connector to display Shopify data on your SharePoint site.
 
 Ivan Bliskavka
+
 http://www.bliskavka.com
 
 This project will connect Shopify customers into SharePoint BCS as an External Content Type.
@@ -17,3 +18,12 @@ Project Goals:
 - Demonstrate how to set up a custom BCS connector.
 - Demonstrate how to interact with Shopify via .NET
 - Gauge interest for a more expanded product.
+
+How to use the SharePoint solution:
+1. Open project in Visual Studio 2013 (SharePoint features must be installed)
+2. Set your target server (Project Properties -> Site URL)
+3. Update ShopifyCustomer.bdcm with your ApiKey, ApiPassword, and ApiHostName. (Create private app on your Shopify site)
+4. Deploy: Right-click on Project -> Deploy
+
+How to use ShopifyClient.cs:
+1. Refer to the TestConsole project for an example.
