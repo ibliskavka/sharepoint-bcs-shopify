@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ShopifyCustomer">
+  <modelRootMoniker Name="/ShopifyCustomer" />
+  <nestedChildShapes>
+    <entityShape Id="2b5e0fb1-2358-4d5c-83c9-009dce1cb053" absoluteBounds="0.5, 1.375, 1.5, 1.9802864583333335">
+      <entityMoniker name="Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer.ShopifyCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f44e716e-6492-43fa-af0e-e9cd27c33a2d" absoluteBounds="0.515, 1.7850000000000001, 1.4700000000000002, 0.44169108072916663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1f4f35e4-38bb-4bd4-942e-b8ad32b95017" absoluteBounds="0.515, 2.2366910807291669, 1.4700000000000002, 1.0185953776041665" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b7b2d738-7a07-4f68-b9e1-a7e3498feb1b" solutionId="b7b2d738-7a07-4f68-b9e1-a7e3498feb1b" resetWebServer="false" sharePointProductVersion="15.0" name="Ibliskavka.SharePoint.Bcs.Shopify" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="a3cb8184-efab-418b-baed-3aeea869da38" />
+  </features>
+</package>

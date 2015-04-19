@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog" Name="ShopifyCustomer">
+  <LobSystems>
+    <LobSystem Name="ShopifyCustomer" Type="DotNetAssembly">
+      <LobSystemInstances>
+        <LobSystemInstance Name="ShopifyCustomer">
+          <Properties>
+            <Property Name="ApiKey" Type="System.String">YOUR_API_KEY</Property>
+            <Property Name="ApiPassword" Type="System.String">YOUR_API_PASSWORD</Property>
+            <Property Name="ApiHostName" Type="System.String">caspian-theme.myshopify.com</Property>
+          </Properties>
+        </LobSystemInstance>
+      </LobSystemInstances>
+      <Entities>
+        <Entity Name="ShopifyCustomer" Namespace="Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer" EstimatedInstanceCount="1000" Version="1.0.0.21">
+          <Properties>
+            <Property Name="OutlookItemType" Type="System.String">Contact</Property>
+            <Property Name="Class" Type="System.String">Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer.ShopifyCustomerService, Customer</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="Id" TypeName="System.Int32" />
+          </Identifiers>
+          <Methods>
+            <!-- start finder method -->
+            <Method Name="ReadList">
+              <Parameters>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="System.Collections.Generic.IEnumerable`1[[Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer.Customer, Customer]]" IsCollection="true" Name="CustomerList">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer.Customer, Customer" Name="Customer">
+                        <TypeDescriptors>
+                          <TypeDescriptor TypeName="System.Int32" IdentifierName="Id" Name="Id" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.String" Name="FirstName" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.String" Name="LastName" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.String" Name="Email" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.Int32" Name="OrdersCount" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.Decimal" Name="TotalSpent" ReadOnly="true">
+                            <Properties>
+                              <Property Name="Decimal Digits" Type="System.Int32">2</Property>
+                            </Properties>
+                          </TypeDescriptor>
+                          <TypeDescriptor TypeName="System.String" Name="AddressPhone" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.String" Name="AddressCity" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.String" Name="AddressProvinceCode" ReadOnly="true" />
+                          <TypeDescriptor TypeName="System.String" Name="AddressZip" ReadOnly="true" />
+                        </TypeDescriptors>
+                      </TypeDescriptor>
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="Finder" ReturnParameterName="returnParameter" Default="true" Name="ReadList" DefaultDisplayName="List Shopify Customers" />
+              </MethodInstances>
+            </Method>
+            <!-- end finder method -->
+            <!-- start specific finder method -->
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Direction="In" Name="id">
+                  <TypeDescriptor TypeName="System.Int32" IdentifierName="Id" Name="Id" />
+                </Parameter>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="Ibliskavka.SharePoint.Bcs.Shopify.ShopifyCustomer.Customer, Customer" Name="Customer">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="System.Int32" ReadOnly="true" IdentifierName="Id" Name="Id" />
+                      <TypeDescriptor TypeName="System.Boolean" ReadOnly="true" Name="AcceptsMarketing" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="CreatedAt" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="FirstName">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">FirstName</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="LastName">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">LastName</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="FullName">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">FullName</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="FileAs">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">FileAs</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="Email">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">Email1Address</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="LastOrderId" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="MultipassIdentifier" />
+                      <TypeDescriptor TypeName="System.String" Name="Note" UpdaterField="true">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">Body</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.Int32" ReadOnly="true" Name="OrdersCount" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="State" />
+                      <TypeDescriptor TypeName="System.Decimal" ReadOnly="true" Name="TotalSpent">
+                        <Properties>
+                          <Property Name="Decimal Digits" Type="System.Int32">2</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="UpdatedAt" />
+                      <TypeDescriptor TypeName="System.Boolean" ReadOnly="true" Name="VerifiedEmail" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="Tags" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="LastOrderName" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressStreet">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">BusinessAddressStreet</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressLine1" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressLine2" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressCity">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">BusinessAddressCity</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressCompany">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">CompanyName</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressCountry">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">BusinessAddressCountry</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressFirstName" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressId" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressLastName" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressPhone">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">BusinessTelephoneNumber</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressProvince" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressZip">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">BusinessAddressPostalCode</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressName" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressProvinceCode">
+                        <Properties>
+                          <Property Name="OfficeProperty" Type="System.String">BusinessAddressState</Property>
+                        </Properties>
+                      </TypeDescriptor>
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressCountryCode" />
+                      <TypeDescriptor TypeName="System.String" ReadOnly="true" Name="AddressCountryName" />
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="SpecificFinder" ReturnParameterName="returnParameter" Default="true" Name="ReadItem" DefaultDisplayName="Read Shopify Customer" />
+              </MethodInstances>
+            </Method>
+            <!-- end specific finder method -->
+            <!-- start update method -->
+            <Method Name="UpdateItem">
+              <Parameters>
+                <Parameter Direction="In" Name="id">
+                  <TypeDescriptor TypeName="System.Int32" IdentifierName="Id" Name="Id" UpdaterField="true" />
+                </Parameter>
+                <Parameter Direction="In" Name="note">
+                  <TypeDescriptor TypeName="System.String" Name="Note" UpdaterField="true" />
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="Updater" Name="UpdateItem" DefaultDisplayName="Update Shopify Customer" />
+              </MethodInstances>
+            </Method>
+            <!-- end update method-->
+          </Methods>
+        </Entity>
+      </Entities>
+    </LobSystem>
+  </LobSystems>
+</Model>

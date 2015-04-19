@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.BusinessDataConnectivity" DefaultFile="ShopifyCustomer.bdcm" FeatureReceiverClass="Microsoft.Office.SharePoint.ClientExtensions.Deployment.ImportModelReceiver" FeatureReceiverAssembly="Microsoft.Office.SharePoint.ClientExtensions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Farm" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="ShopifyCustomer.bdcm" Target="ShopifyCustomer\" Type="ElementFile" />
+    <ProjectOutputFile ProjectId="f8b26395-ddb7-4fa8-902d-243d00659816" ProjectPath="Ibliskavka.SharePoint.Bcs.Shopify.csproj" Target="BdcAssemblies\" Type="ElementFile" />
+  </Files>
+  <FeatureProperties>
+    <FeatureProperty Key="IncrementalUpdate" Value="true" />
+    <FeatureProperty Key="ModelFileName" Value="$SharePoint.ProjectItem.Name$\ShopifyCustomer.bdcm" />
+    <FeatureProperty Key="ShopifyCustomer" Value="BdcAssemblies\$SharePoint.Project.AssemblyFileName$" />
+  </FeatureProperties>
+</ProjectItem>
