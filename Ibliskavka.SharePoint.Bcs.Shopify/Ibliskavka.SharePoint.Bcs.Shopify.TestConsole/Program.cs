@@ -50,9 +50,9 @@ namespace Ibliskavka.SharePoint.Bcs.Shopify.TestConsole
 
         private static ShopifyClient GetShopifyClient()
         {
-            string apiKey = "d7d9b9084f6872aebdc008fde69b0178";
-            string apiPassword = "fffc2f9adf29c0540fb6b46833d447c4";
-            string apiHostName = "volk-leather.myshopify.com";
+            string apiKey = "YOUR_API_KEY";
+            string apiPassword = "YOUR_API_PASSWORD";
+            string apiHostName = "caspian-theme.myshopify.com";
 
             return new ShopifyClient(apiKey, apiPassword, apiHostName);
         }
