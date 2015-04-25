@@ -20,10 +20,12 @@ Project Goals:
 - Gauge interest for a more expanded product.
 
 How to use the SharePoint solution:  
-1. Open project in Visual Studio 2013 (SharePoint features must be installed)
-2. Set your target server (Project Properties -> Site URL)
-3. Update ShopifyCustomer.bdcm with your ApiKey, ApiPassword, and ApiHostName. (Create private app on your Shopify site)
-4. Deploy: Right-click on Project -> Deploy
+
+1. Open project in Visual Studio 2013 (SharePoint features must be installed)  
+2. Set your target server (Project Properties -> Site URL)  
+3. Update ShopifyCustomer.bdcm with your ApiKey, ApiPassword, and ApiHostName. (Create private app on your Shopify site)  
+4. Deploy: Right-click on Project -> Deploy  
 
 How to use ShopifyClient.cs:  
-1. Refer to the TestConsole project for an example.
+
+1. Refer to the TestConsole project for an example.  
