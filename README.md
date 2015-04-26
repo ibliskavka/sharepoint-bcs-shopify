@@ -3,7 +3,8 @@ A SharePoint Business Connectivity Service connector to display Shopify data on 
 
 Ivan Bliskavka
 
-http://www.bliskavka.com
+http://www.bliskavka.com  
+Demo Video: https://youtu.be/kNc76mvVafI
 
 This project will connect Shopify customers into SharePoint BCS as an External Content Type.
 The ECT can then be displayed as a SharePoint External List.
@@ -19,7 +20,7 @@ Project Goals:
 - Demonstrate how to interact with Shopify via .NET
 - Gauge interest for a more expanded product.
 
-How to use the SharePoint solution:  
+How to use the SharePoint Solution:  
 
 1. Open project in Visual Studio 2013 (SharePoint features must be installed)  
 2. Set your target server (Project Properties -> Site URL)  
